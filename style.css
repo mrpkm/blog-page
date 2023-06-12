@@ -1,0 +1,630 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;400;500;600;700;800&family=Poppins:wght@100;300;400;500;600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  border: 0;
+  margin: 0;
+  list-style: none;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-family: "Poppins", sans-serif;
+}
+
+/* ==================================================  */
+html {
+  font-size: 65%;
+}
+body {
+  width: 100%;
+}
+.header {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 4rem;
+  backdrop-filter: blur(0.4rem);
+  text-transform: uppercase;
+  background: black;
+  /* opacity: 1; */
+  transition: all 0.2s ease-in-out;
+  z-index: 1000;
+  /* margin-bottom: 15rem; */
+}
+.header.active {
+  background-color: #fff;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+  color: black;
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  left: 0;
+  right: 0;
+  padding: 0.5rem 3rem;
+  z-index: 1000;
+}
+.header.active .logo {
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+.header.active .navbar ul a {
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+.header.active .navbar ul li {
+  padding: 2px 0 3px;
+}
+.header.active .iconss {
+  color: black;
+  transition: all 0.2s ease-in-out;
+}
+
+/* =================================logo============================= */
+.header .logo {
+  width: 84px;
+  height: 52px;
+  /* border: 2px solid red; */
+}
+
+.header .logo img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+/* .header .logo {
+  font-size: 2.5rem;
+  font-weight: bolder;
+  color: var(--white);
+  text-transform: uppercase;
+  color: #fff;
+} */
+
+/* .header .logo i {
+  color: var(--black);
+} */
+.header .logo {
+  font-size: 2.5rem;
+  /* border: 2px solid white; */
+}
+
+.a {
+  color: red;
+  padding: 0;
+}
+.p {
+  color: blue;
+  /* letter-spacing: -5px; */
+}
+
+.blog {
+  color: #1ff057;
+  padding: 0 10rem;
+  margin: -10rem;
+}
+
+/* =================================logo============================= */
+.header .navbar ul {
+  display: flex;
+  color: white;
+}
+.header .navbar ul li {
+  padding: 10px 0 15px;
+  /* padding: 2px 0 5px; */
+}
+
+.header .navbar a {
+  font-size: 1.7rem;
+  color: var(--white);
+  padding: 5px 20px;
+  color: white;
+}
+.header .navbar a:hover {
+  color: var(--black);
+}
+#menu-btn {
+  font-size: 3rem;
+  cursor: pointer;
+  color: var(--white);
+  display: none;
+  color: #2308f3;
+  outline: none;
+  border: none;
+}
+.iconss {
+  font-size: 2.5rem;
+  margin-right: 25px;
+  letter-spacing: 1rem;
+  color: #fff;
+  cursor: pointer;
+  outline: none;
+  border: none;
+}
+.nav1 {
+  display: none;
+}
+.header ul li:hover .nav1 {
+  display: block;
+  position: absolute;
+  background-color: #efca15;
+  border-radius: 5px;
+  margin: 7px 0 0 -15px;
+}
+.header ul li:hover .nav1 ul {
+  display: block;
+}
+.header ul li:hover .nav1 ul li:hover {
+  background: gray;
+}
+.header ul li:hover .nav1 ul li {
+  padding: 10px;
+  border-bottom: 1px dotted #000;
+}
+
+.header .navbar ul li:last-child {
+  display: none;
+  background-color: red;
+  border: 5px solid rgb(15, 226, 65);
+}
+/* ==================search============== */
+.search {
+  width: 98%;
+  background-color: #000;
+  margin: 10px;
+  justify-content: space-between;
+  border: 2px solid black;
+  visibility: hidden;
+  position: absolute;
+  z-index: 1000;
+  text-align: center;
+}
+.search-show {
+  visibility: visible;
+}
+.search input {
+  width: 94%;
+  padding: 12px;
+  background-color: #33ff71;
+  outline: none;
+  border: none;
+  text-align: center;
+  font-size: 2rem;
+  color: #000;
+}
+.search input::placeholder {
+  font-size: 2rem;
+  color: #000;
+  text-align: center;
+}
+.search .icons {
+  width: 5%;
+  background-color: black;
+  color: white;
+  font-size: 2rem;
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.search .icons:hover {
+  color: #ee1010;
+}
+/* =========================all =extenction ======================== */
+h4 {
+  /* outline: 1px solid #162544!important; */
+  background: red;
+  font-size: 3rem;
+  padding: 5px 10px;
+}
+.top-container {
+  padding: 2px 9%;
+  margin: 4rem 2rem 2rem;
+  width: 75%;
+}
+
+.top-container .all-list-name {
+  /* background-color: red; */
+  display: block;
+  text-align: left;
+  width: 405px;
+  padding: 10px 25px;
+  margin: 25px 35px;
+}
+.top-container .all-list-name ul li {
+  /* background-color: rgb(12, 12, 240); */
+  padding: 10px 0;
+}
+.top-container .all-list-name ul li a {
+  /* background-color: rgb(187, 255, 0); */
+  color: #000;
+  font-size: 2rem;
+  /* padding: 20px; */
+}
+.top-container .all-list-name ul li a:hover {
+  color: #e80b0b;
+  text-decoration: underline;
+}
+
+.top-container .main-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+.top-container .all-services {
+  text-align: left;
+  margin: 2rem 0;
+}
+.top-container .all-services .paragraph {
+  text-align: left;
+  padding: 5px 10px;
+  word-spacing: 1;
+}
+.top-container .all-services .main-image {
+  width: 700px;
+  height: 400px;
+}
+.top-container .all-services .main-image img {
+  width: 100%;
+  height: 100%;
+}
+.top-container .all-services .main-heading h1 {
+  text-align: left;
+  padding: 50px 20px 10px;
+}
+.top-container .main-image {
+  width: 800px;
+  height: 400px;
+  margin: auto;
+  overflow: hidden;
+}
+.top-container .main-image img {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+.top-container .paragraph p {
+  font-size: 2rem;
+  word-spacing: 2px;
+  text-align: left;
+  padding: 20px;
+}
+.top-container .paragraph p a {
+  color: #000;
+  font-weight: bold;
+  font-size: 2rem;
+  word-spacing: 1px;
+}
+.top-container .paragraph p a:hover {
+  color: red;
+  font-style: italic;
+}
+.top-container .mix {
+  font-size: 2rem;
+  color: #f68e05;
+  letter-spacing: 0.1rem;
+  padding-left: 30px;
+  font-weight: 300;
+}
+.top-container .mix li {
+  padding: 6px;
+  word-spacing: 3px;
+  /* border: 2px solid; */
+}
+.top-container .mix .icons li {
+  padding: 0;
+}
+/* ======================video edating============================= */
+.props,
+.cons,
+.feature {
+  font-size: 1.5rem;
+  margin-left: 25px;
+  /* padding-left: 250px; */
+  /* background-color: red; */
+}
+
+/* ======================right pupop========================= */
+.right .right-box {
+  position: fixed;
+  top: 50%;
+  right: 0;
+  width: 20%;
+  background: #ebe6e6;
+  padding: 20px 20px;
+  text-align: center;
+}
+.right .right-box h1 {
+  font-size: 2rem;
+  background: red;
+  color: blue;
+  font-weight: bolder;
+}
+.right .right-box li {
+  text-align: left;
+  font-size: 1.8rem;
+  padding: 5px 0;
+  color: #000;
+}
+.right .right-box li a {
+  color: #000;
+}
+
+/* ============================right end================================ */
+/* =============== home swiper start================  */
+.container {
+  /* background-color: aquamarine; */
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  /* top: 6%;
+  left: 0;
+  margin-bottom: 2rem; */
+}
+
+.swiper {
+  width: 100%;
+  height: 500px;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 500px;
+}
+.swiper .swiper-button-prev,
+.swiper .swiper-button-next {
+  color: #fff;
+}
+.swiper .swiper-pagination-bullet-active {
+  background-color: #fff;
+}
+.swiper .swiper-wrapper {
+  display: flex;
+}
+.swiper .swiper-wrapper a {
+  /* background-color: red; */
+  font-size: 3rem;
+  color: #000;
+  z-index: 10000;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px 0;
+}
+.swiper .swiper-wrapper a:hover {
+  color: red;
+  text-decoration: underline;
+}
+/* =============== home swiper end================  */
+/* =============== home service start================  */
+.serviceses {
+  width: 100%;
+}
+.serviceses h1 {
+  text-align: center;
+  color: #33ff71;
+  font-size: 4rem;
+  padding: 10px 0 30px;
+}
+.serviceses span {
+  color: orangered;
+  text-decoration: underline;
+}
+.serviceses .service {
+  display: flex;
+  margin: 25px 15% 40px;
+  gap: 15px;
+  overflow: hidden;
+  /* border: 2px solid #000; */
+  box-shadow: 1rem 1.5rem #002aff;
+}
+.serviceses .service .img {
+  width: 40rem;
+  height: 25rem;
+  overflow: hidden;
+}
+.serviceses .service .img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  overflow: hidden;
+}
+.serviceses .service .headling {
+  text-align: center;
+  color: red;
+  width: 70%;
+}
+.serviceses .service .headling h2 {
+  color: #3b30ff;
+  font-size: 3rem;
+  font-weight: bolder;
+  text-align: center;
+  padding: 10px 0;
+}
+.serviceses .service .headling p {
+  color: black;
+  font-weight: 300;
+  text-align: left;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  font-size: 1.5rem;
+  padding: 0 15px 10px;
+}
+.serviceses .service .headling .btn {
+  width: 95%;
+  padding: 10px 15px;
+  color: #fff;
+  background-color: black;
+  border-radius: 10px;
+  word-spacing: 4px;
+  letter-spacing: 3px;
+  font-size: 1.8rem;
+  margin: 30px 0 0;
+}
+/* =============== home service end================  */
+
+/* ======================footer start================== */
+.footer {
+  width: 100%;
+  background-color: black;
+  padding: 10px 0;
+  text-align: center;
+}
+.footer h3,
+a {
+  color: #fdfbfb;
+  font-size: 1.5rem;
+}
+
+/* ======================footer end================== */
+
+/* ==============contect us :start========================== */
+.contect-us {
+  background: url(https://www.superiorwallpapers.com/download/abstract-color-digital-objects-hd-wallpaper-1920x1200.jpg);
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 88vh;
+  width: 100%;
+  z-index: -1;
+}
+.contect-us .cont-us {
+  background-color: #1f1c1c;
+  color: white;
+  font-size: 2.5rem;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 7px 15px;
+  word-spacing: 4px;
+  letter-spacing: 4px;
+}
+.contect-us .contect {
+  display: flex;
+  margin: 5rem 15% 0;
+}
+.contect-us .contect .send {
+  width: 125%;
+  height: 70vh;
+  background-color: #1f1c1c;
+}
+.contect-us .contect .send h2 {
+  font-size: 3rem;
+  color: orange;
+  font-weight: bolder;
+  padding: 2rem 0 2rem 2rem;
+}
+.contect-us .contect .send form input {
+  padding: 10px;
+  margin: 1.5rem 0 0 2rem;
+  width: 40%;
+  outline: none;
+  color: #fff;
+  font-size: 2rem;
+  text-transform: uppercase;
+  border-left: 3px solid orange;
+  background: transparent;
+  border-radius: 6px;
+  letter-spacing: 2px;
+}
+.contect-us .contect .send form input::placeholder {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5px;
+}
+.contect-us .contect .send form textarea::placeholder {
+  font-size: 1.5rem;
+  color: #fff;
+  padding: 5px;
+}
+
+.contect-us .contect .send form textarea {
+  width: 84%;
+  height: 10rem;
+  margin: 1.5rem 0 0 2rem;
+  outline: none;
+  border-left: 3px solid orange;
+  font-size: 2rem;
+  color: #fff;
+  background: transparent;
+  border-radius: 6px;
+  resize: none;
+  padding-left: 10px;
+  letter-spacing: 2px;
+}
+.contect-us .contect .send form .btn {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  color: #000;
+  background-color: orange;
+  border-radius: 10px;
+  float: right;
+  margin: 2rem 2rem 0 0;
+  padding: 10px;
+  letter-spacing: 2px;
+}
+
+.contect-us .contect .info {
+  width: 75%;
+  height: 70vh;
+  background-color: orange;
+  padding: 2rem 0 0 5rem;
+  color: white;
+}
+.contect-us .contect .info li {
+  font-size: 2rem;
+  color: #000;
+  padding: 5px;
+}
+.contect-us .contect .info h2 {
+  font-size: 3.5rem;
+  color: #000;
+  padding-bottom: 10px;
+}
+.contect-us .contect .info .icons i {
+  color: #000;
+  margin: 120px 15px 0;
+  font-size: 2.5rem;
+}
+
+/* ==============contect us end========================== */
+
+/* ==============about us start========================== */
+body {
+  background: url(https://www.patternpictures.com/wp-content/uploads/Kristal-subtle-glass-white-background-pattern-patternpictures-0220.png);
+}
+
+.about h1 {
+  text-align: center;
+  background-color: rgba(1, 11, 2, 0.608);
+  color: whitesmoke;
+  padding: 10px 0;
+  letter-spacing: 3px;
+}
+
+.aboutus {
+  display: flex;
+  width: 100%;
+  padding: 5rem 10%;
+  text-align: center;
+}
+
+.about-text {
+  font-family: "Tapestry", cursive;
+  text-align: left;
+  background-color: rgb(193, 226, 162);
+  /* float: left; */
+  /* width: 50%; */
+  /* height: 70%; */
+  box-shadow: 10px 13px 18px rgb(17, 85, 37);
+  padding: 8px 10px;
+  /* margin: -13px 8px 5px -63px; */
+  color: rgb(20, 20, 131);
+  font-size: 30px;
+}
+/* ==============about us end========================== */
+
+.fa-magnifying-glass {
+  display: none;
+}
